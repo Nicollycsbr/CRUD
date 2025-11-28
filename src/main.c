@@ -333,7 +333,7 @@ void excluir_cliente(){
     int encontrado=0;
     long posicao;
 
-    printf("\n-----EXCLUIR CLIENTE-----\n");
+    printf("\nEXCLUIR CLIENTE\n");
     printf("Insira o CPF:\n");
     clear_input_buffer();
     fgets(buscar_cpf, sizeof(buscar_cpf), stdin);
