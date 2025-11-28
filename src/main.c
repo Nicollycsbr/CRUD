@@ -93,7 +93,7 @@ void cadastro(Cliente *P, int *qtd, FILE *arqPessoa) {
     int valido=0;
     clear_input_buffer();
 
-    printf("\n-----CADASTRO DE CLIENTE-----\n");
+    printf("\nCADASTRO DE CLIENTE\n");
     printf("Nome do cliente: ");
     fgets(P->nome, sizeof(P->nome), stdin);
     P->nome[strcspn(P->nome, "\n")]='\0';
@@ -152,7 +152,7 @@ void listarClientes(FILE *arqPessoa) {
 
     rewind(arqPessoa);
 
-    printf("\n-----CLIENTES CADASTRADOS------\n");
+    printf("\nCLIENTES CADASTRADOS\n");
 
     while (fread(&temp, sizeof(Cliente), 1, arqPessoa)==1) {
         if (!temp.ativo) continue;
@@ -225,7 +225,7 @@ void alterar_cliente()
     int encontrado=0;
     long posicao;
 
-    printf("\n-----ALTERAR CLIENTE-----\n");
+    printf("\nALTERAR CLIENTE\n");
     printf("Insira o CPF:\n");
     clear_input_buffer();
     fgets(buscar_cpf, sizeof(buscar_cpf), stdin);
@@ -253,7 +253,7 @@ void alterar_cliente()
             printf("Email atual: %s\n", cliente.email);
             printf("Limite atual: %.2f\n", cliente.limite_compra);
 
-            printf("\nInforme os novos dados (pressione Enter para manter o atual)\n");
+            printf("\nInforme os novos dados\n");
 
             printf("Novo nome: ");
             clear_input_buffer();
